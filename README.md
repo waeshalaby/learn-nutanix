@@ -84,5 +84,5 @@ When you install **AOS on an x86 server**, it **automatically sets up** the core
 ✅ **Reduces costs compared to traditional VMware setups.**  
 
 💡 **By combining compute, storage, and management into a single platform, Nutanix AOS simplifies IT, reduces costs, and eliminates the complexity of traditional infrastructure.**
-💡 **Installing AOS turns your x86 servers into a full HCI appliance.**
+##💡 Installing AOS turns your x86 servers into a full HCI appliance.
 ---
