@@ -90,19 +90,24 @@ When you install **AOS on an x86 server**, it **automatically sets up** the core
 
 # **🔹 Advanced Nutanix Products & Their Detailed Purpose**
 
-| **Product** | **Purpose** | **How It Helps** |
-|------------|------------|-----------------|
-| **🔹 Nutanix Flow** | **Microsegmentation & Security** | Similar to **VMware NSX**, Flow provides **network segmentation, firewalling, and traffic control** between VMs to prevent security threats. |
-| **🔹 Nutanix Files** | **Software-Defined File Storage** | Alternative to **NAS (NetApp, Dell PowerScale, etc.)**, providing **NFS, SMB, and CIFS storage** for applications, user home directories, and log storage. |
-| **🔹 Nutanix Volumes** | **Block Storage (iSCSI-based)** | Provides **high-performance block storage** for **databases (Oracle, SQL, MySQL)** and Virtual Machines. Works like **SAN storage** but is built into Nutanix. |
-| **🔹 Nutanix Objects** | **S3-Compatible Object Storage** | Alternative to **AWS S3, MinIO, or Ceph Object Storage**—designed for backups, archiving, AI/ML workloads, and cloud-native applications. |
-| **🔹 Nutanix Calm** | **Application Automation & Orchestration** | **Automates multi-cloud deployments** and **application lifecycle management** (similar to **VMware vRealize Automation**). |
-| **🔹 Nutanix Xi Leap** | **Disaster Recovery as a Service (DRaaS)** | Nutanix’s **built-in DR solution** for replicating workloads to **another Nutanix cluster or Nutanix Cloud** (alternative to **VMware Site Recovery**). |
-| **🔹 Nutanix Karbon** | **Kubernetes Management** | Provides **fully managed Kubernetes clusters** on Nutanix (similar to **VMware Tanzu, OpenShift**). |
-| **🔹 Nutanix Beam** | **Cloud Cost Management & Governance** | Helps monitor and optimize **cloud costs across AWS, Azure, and private cloud** (similar to **VMware Aria Cost**). |
-| **🔹 Nutanix Era** | **Database Lifecycle Management** | Automates **database provisioning, patching, cloning, and backup** for **Oracle, MySQL, PostgreSQL, and SQL Server**. |
-| **🔹 Nutanix Clusters** | **Run Nutanix on AWS & Azure** | Allows running **Nutanix HCI on AWS & Azure**, making hybrid cloud seamless (alternative to **VMware Cloud on AWS**). |
-| **🔹 Nutanix Mine** | **Backup & Data Protection** | Integrates with **Veeam, HYCU, Commvault** to provide a **built-in backup solution** for VMs, databases, and cloud storage. |
+| **Category** | **Nutanix Product** | **Purpose** |
+|------------|------------------|-----------------|
+| **Hypervisor & Core HCI** | **AHV (Acropolis Hypervisor)** | Alternative to VMware ESXi (free with Nutanix AOS). |
+| **Management & Orchestration** | **Prism** | Unified management & monitoring (alternative to VMware vCenter). |
+| **Storage** | **DSF (Distributed Storage Fabric)** | Software-defined storage, alternative to vSAN. |
+| **File Storage** | **Nutanix Files** | Scale-out NAS replacement (NFS, SMB, CIFS). |
+| **Object Storage** | **Nutanix Objects** | S3-compatible object storage. |
+| **Block Storage** | **Nutanix Volumes** | iSCSI block storage for databases & applications. |
+| **Networking & Security** | **Nutanix Flow** | Microsegmentation & security (alternative to VMware NSX). |
+| **Automation & Kubernetes** | **Nutanix Calm** | Multi-cloud automation (alternative to vRealize Automation). |
+| **Kubernetes Management** | **Nutanix Karbon** | Kubernetes orchestration (alternative to VMware Tanzu). |
+| **Disaster Recovery** | **Nutanix Xi Leap** | Built-in DRaaS (alternative to VMware Site Recovery). |
+| **Hybrid Cloud** | **Nutanix Clusters** | Run Nutanix on AWS & Azure (alternative to VMware Cloud on AWS). |
+| **Database Management** | **Nutanix Era** | Automates database provisioning & lifecycle management. |
+| **Cloud Cost Optimization** | **Nutanix Beam** | Tracks & optimizes cloud costs. |
+| **Backup & Protection** | **Nutanix Mine** | Integrated backup & data protection. |
+| **🔹 Migration** | **Nutanix Move** | **Automates VM migrations from VMware ESXi, Hyper-V, and AWS to Nutanix AHV.** |
+
 
 ---
 
