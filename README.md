@@ -153,4 +153,76 @@ This document compares Nutanix's advanced products with their **VMware equivalen
 ✅ **Calm, Leap, Beam = Automation, Disaster Recovery, Cost Management**  
 ✅ **Nutanix Clusters = VMware Cloud on AWS Alternative (Hybrid Cloud Solution)**  
 
+# **🔹 Why Are VMware Customers Moving to Nutanix?**
+VMware customers are looking for alternatives due to **Broadcom’s changes to VMware licensing**, forcing customers into **expensive subscriptions** and requiring **multiple products** to build an HCI solution.
+
+---
+
+## **🔹 Why Are VMware Customers Leaving?**
+### **1️⃣ Forced Subscription Model**
+- Broadcom eliminated **perpetual VMware licenses**, requiring **subscription-based pricing**.
+- Higher costs for **vSphere, vSAN, NSX, vCenter, and other VMware components**.
+- Customers with long-term VMware investments now need **continuous payments**.
+
+### **2️⃣ VMware HCI Requires Multiple Paid Components**
+To build a full **HCI (Hyperconverged Infrastructure) solution** with VMware, customers must purchase **multiple products**:
+
+| **Feature** | **VMware Products Needed** | **Cost Model** |
+|------------|------------------|-------------|
+| **Compute Virtualization** | **vSphere + ESXi** | Paid Subscription |
+| **Storage Virtualization** | **vSAN** | Paid Subscription |
+| **Networking & Security** | **NSX** | Paid Subscription |
+| **Management & Orchestration** | **vCenter** | Paid Subscription |
+| **VM Migration & HA** | **vMotion, DRS, HA** | Paid Subscription |
+
+👉 **Result:** Customers must **pay separately for 4-5 different VMware products**, while **Nutanix AOS includes everything in one platform**.
+
+---
+
+# **🔹 High-Level Migration Plan: VMware to Nutanix**
+This migration plan outlines how to **transition from VMware (vSphere, vSAN, NSX, vCenter) to Nutanix (AOS, AHV, Prism, DSF, Flow)**.
+
+---
+
+## **📌 Step 1: Assess Existing VMware Environment**
+✅ Identify **existing VMware components** (vSphere, vSAN, NSX, vCenter).  
+✅ Check **how many VMs, storage, and networking dependencies exist**.  
+✅ Determine if **on-prem, cloud, or hybrid** Nutanix deployment is needed.  
+
+---
+
+## **📌 Step 2: Deploy Nutanix Infrastructure**
+✅ Install **Nutanix AOS** on **existing or new hardware**.  
+✅ Choose **Nutanix AHV** as the hypervisor (or keep ESXi temporarily for a phased transition).  
+✅ Deploy **Nutanix Prism** for **management & monitoring**.  
+✅ Set up **Nutanix DSF (Distributed Storage Fabric) to replace vSAN**.  
+✅ Enable **Nutanix Flow (microsegmentation) to replace NSX** if needed.  
+
+---
+
+## **📌 Step 3: Migrate VMs from VMware to Nutanix AHV**
+✅ Install **Nutanix Move** to automate VM migrations.  
+✅ **Migrate VMs from VMware ESXi to Nutanix AHV** with minimal downtime.  
+✅ Validate application performance and networking configurations.  
+
+---
+
+## **📌 Step 4: Transition Storage & Networking**
+✅ Move storage from **VMware vSAN to Nutanix DSF** (storage fabric).  
+✅ Replace **VMware NSX firewall rules** with **Nutanix Flow security policies**.  
+✅ Test **Nutanix Prism for centralized control** instead of vCenter.  
+
+---
+
+## **📌 Step 5: Decommission VMware Products**
+✅ Shut down **VMware vCenter, vSAN, NSX, and ESXi** as workloads move to Nutanix.  
+✅ Optimize costs by **removing VMware licenses**.  
+✅ Train IT teams on **Nutanix AOS, AHV, and Prism** for ongoing management.  
+
+---
+
+# **🔹 Summary**
+- **VMware’s new subscription model is forcing customers to look for cost-effective alternatives**.
+- **VMware HCI requires multiple paid components (vSphere, vSAN, NSX, vCenter, vMotion, etc.)**.
+- **Nutanix provides a fully integrated HCI solution** with **AOS, AHV, DSF
 
