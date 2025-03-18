@@ -98,7 +98,7 @@ When you install **AOS on an x86 server**, it **automatically sets up** the core
 | **File Storage** | **Nutanix Files** | Scale-out NAS replacement (NFS, SMB, CIFS). |
 | **Object Storage** | **Nutanix Objects** | S3-compatible object storage. |
 | **Block Storage** | **Nutanix Volumes** | iSCSI block storage for databases & applications. |
-| **Networking & Security** | **Nutanix Flow** | Microsegmentation & security (alternative to VMware NSX). |
+| **Networking & Security** | **Nutanix Flow** | Microsegmentation & security provide virtual firewall (alternative to VMware NSX). |
 | **Automation & Kubernetes** | **Nutanix Calm** | Multi-cloud automation (alternative to vRealize Automation). |
 | **Kubernetes Management** | **Nutanix Karbon** | Kubernetes orchestration (alternative to VMware Tanzu). |
 | **Disaster Recovery** | **Nutanix Xi Leap** | Built-in DRaaS (alternative to VMware Site Recovery). |
@@ -225,4 +225,51 @@ This migration plan outlines how to **transition from VMware (vSphere, vSAN, NSX
 - **VMware’s new subscription model is forcing customers to look for cost-effective alternatives**.
 - **VMware HCI requires multiple paid components (vSphere, vSAN, NSX, vCenter, vMotion, etc.)**.
 - **Nutanix provides a fully integrated HCI solution** with **AOS, AHV, DSF
+
+# **Nutanix Storage for OpenShift**
+
+This document provides a high-level summary of how to integrate Nutanix storage with OpenShift using Nutanix AOS, Nutanix Files, Nutanix Objects, and the Nutanix CSI Operator.
+
+---
+
+## **1️⃣ Deploy Nutanix AOS & Connect IBM FlashSystem**
+- Install **Nutanix AOS** on servers.
+- Attach **IBM FlashSystem** as external block storage (iSCSI/FC).
+- Nutanix **DSF (Distributed Storage Fabric)** manages the storage pool.
+
+---
+
+## **2️⃣ Enable Nutanix Storage Services**
+- From **Prism**, install **Nutanix Files** to provide **File Storage (NFS, SMB, CIFS)**.
+- From **Prism**, install **Nutanix Objects** to provide **Object Storage (S3-compatible API)**.
+
+---
+
+## **3️⃣ Install Nutanix CSI Operator in OpenShift**
+- Deploy the **Nutanix CSI Operator** from OperatorHub.
+- Configure **StorageClasses** for different storage types.
+
+---
+
+## **4️⃣ Configure OpenShift StorageClasses**
+- **Block Storage (iSCSI) → Nutanix Volumes** (**RWO**) ✅
+- **File Storage (NFS) → Nutanix Files** (**RWX**) ✅
+- **Object Storage (S3) → Nutanix Objects** (**S3 API**) ✅
+
+---
+
+## **5️⃣ Validate Storage Integration**
+- Create **Persistent Volume Claims (PVCs)**.
+- Test workloads with **Nutanix-backed storage**.
+
+---
+
+## **🔹 Summary**
+✅ Deploy Nutanix AOS & connect IBM FlashSystem.  
+✅ Install **Nutanix Files & Nutanix Objects** from **Prism**.  
+✅ Install **Nutanix CSI Operator** on OpenShift.  
+✅ Configure **StorageClasses** for **Block, File, and Object storage**.  
+✅ **Block Storage (RWO) → Nutanix Volumes | File Storage (RWX) → Nutanix Files | Object Storage (S3) → Nutanix Objects**.
+
+🚀 **OpenShift is now integrated with Nutanix storage!**
 
